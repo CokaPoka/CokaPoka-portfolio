@@ -1,0 +1,29 @@
+.login-input {
+    width: 180px;
+    margin: 0 4px;
+    padding: 3px;
+    font-size: 13px;
+}
+.password {
+    width: 100px;
+}
+.btn-login {
+  background-color: rgba(251, 251, 251, 0.85);
+  width: 50px;
+  border: none;
+  font-size: 13px;
+  text-align: center;
+  font-weight: lighter;
+  text-decoration: none;
+  color: #738598;
+  padding: 6px;
+  margin: 0 5px;
+}
+.btn-login:hover{
+  background-color: rgba(255, 255, 255);
+  width: 50px;
+  font-size: 13.2px;
+  text-align: center;
+  font-weight: lighter;
+  border: none;
+}
