@@ -1,0 +1,12 @@
+.photo {
+    display: inline-flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 5px;
+    
+}
+
+.img-control {
+    height: 250px;
+    width: auto;
+}

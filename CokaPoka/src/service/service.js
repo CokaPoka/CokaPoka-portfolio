@@ -4,7 +4,7 @@ import { authHeader } from './auth.service';
 const BASE_URL = 'https://coetus.herokuapp.com/api/users'
 
 const register = async (name, surname, username, password, email) => {
-    return await axios.put(BASE_URL, { name, surname, username, password, email });
+    return await axios.put(BASE_URL, { "name": name, "surname": surname, "username": username, "password": password, "email": email });
 
 }
 const login = async (username, password) => {

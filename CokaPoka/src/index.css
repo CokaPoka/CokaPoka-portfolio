@@ -164,10 +164,7 @@ h4:hover{
 }
 
 .buy-img {
-  display: flex;
-  justify-content: space-between;
-  margin: 20px 5%;
-  flex-direction: column;
+  
 }
 .albums {
   display: flex;
@@ -192,4 +189,8 @@ h4:hover{
   background-image: url('../src/images/xmas.jpg');
   background-size: cover;
   margin-bottom: 5px;
+}
+
+img {
+  object-fit: cover;
 }
