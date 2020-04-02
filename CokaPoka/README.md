@@ -2,10 +2,10 @@ Instalacije:
 
 npm install --save react-router-dom;
 npm install --save axios;
-npm install react-slideshow-image -S
+npm install react-slideshow-image -S;
+npm install react-flippy;
 
-Za sad ima dve funkcionalnosti:
+Za sad ima tri funkcionalnosti:
 1. Prikazuje broj fotografija
 2. Sortira po kategoriji
-
-I treca ako se racuna prikaz :D
+3. Search filter
