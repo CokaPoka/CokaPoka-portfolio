@@ -52,8 +52,8 @@ const Navigation = ({ setUser})=>{
             </div>
         </div>
                 <Switch>
-                    <Route path='/register' component={(props) => <Register setUser={setUser} {...props} />} />
-                    <Route path='/login' component={(props) => <Login setUser={setUser} {...props} />} />
+                    <Route path='/register'><Register /> </Route>  
+                    <Route path='/login'><Login /></Route> 
                     <Route path="/gallery">
                         <Gallery />
                     </Route>

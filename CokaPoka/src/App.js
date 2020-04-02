@@ -4,11 +4,11 @@ import Navigation from './components/Navigation';
 
 
 function App() {
-  const [user, setUser] = useState();
+ 
   
   return (
     <>
-      <Navigation setUser={setUser} user={user}></Navigation>
+      <Navigation ></Navigation>
      
     </>
   )

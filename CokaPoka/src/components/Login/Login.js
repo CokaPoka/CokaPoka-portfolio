@@ -4,7 +4,7 @@ import {login} from '../../service/service'
 import { useHistory } from 'react-router-dom';
 import { setToken } from '../../service/auth.service';
 
-const Login = ({setUser}) => {
+const Login = () => {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
     const history=useHistory()
@@ -13,7 +13,6 @@ const Login = ({setUser}) => {
         login({ username, password })
             .then(data => {
                 if (data.success) {
-                    setUser(data.user)
                     setToken(data.token)
                     history.push('/')
                 }

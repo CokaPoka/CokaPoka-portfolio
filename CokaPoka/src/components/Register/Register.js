@@ -4,7 +4,7 @@ import {register} from '../../service/service'
 import { useHistory } from 'react-router-dom';
 
 
-const Register = ({setUser}) => {
+const Register = () => {
     const [name, setName] = useState('')
     const [surname, setSurname] = useState('')
     const [username, setUsername] = useState('')
@@ -42,7 +42,6 @@ const Register = ({setUser}) => {
          register({ name, surname, username, password, email})
             .then((res) => {
                 if (res.data.success) {
-                    setUser(res.data.user)
                     history.push('/')
                 }
                 else console.log('Error')

@@ -50,6 +50,7 @@ margin: 0 5%;
   background-color: rgba(115, 133, 152, 0.1);
   position: fixed;
   width: 100%;
+  z-index: 2;
   
 
 }
