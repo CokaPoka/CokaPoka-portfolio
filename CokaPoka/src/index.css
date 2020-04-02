@@ -47,13 +47,14 @@ margin: 0 5%;
 }
 .navigation{
   padding: 15px 0;
-  background-color: rgba(115, 133, 152, 0.1);
+  background-color: #dee3e2;
   position: fixed;
   width: 100%;
   z-index: 2;
   
 
 }
+
 .nav-control {
   margin: 0 5%;
   display: flex;

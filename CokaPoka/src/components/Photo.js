@@ -22,7 +22,7 @@ class Photo extends Component {
     </FrontSide>
             <BackSide
                     style={{ backgroundColor: '#dee3e2', textAligin: "center", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                <p>{this.props.photo.title}</p>
+                <p className="title">{this.props.photo.title}</p>
     </BackSide>
         </Flippy>
         </div>

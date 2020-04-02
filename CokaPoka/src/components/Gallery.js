@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import PhotosList from './PhotosList';
 import getPhotosMock from '../service/mockapi';
 import Filter from './Filter';
+import Basket from './Baket';
 
 class Gallery extends Component {
     constructor(props) {
@@ -10,7 +11,8 @@ class Gallery extends Component {
 
         this.state = {
             photos: [],
-            filteredPhotos: []
+            filteredPhotos: [],
+            chartItems: []
         }
 
         this.handleChangeCategory = this.handleChangeCategory.bind(this);
@@ -28,20 +30,6 @@ class Gallery extends Component {
         this.listPhotos();
     }
 
-    handleSearch(e) {
-        const searchValue = e.target.value
-
-        console.log(searchValue, this.state.photos);
-
-        let copyList = [...this.state.photos];
-
-        let filtered = copyList.filter(photo =>
-            photo.title.toLowerCase().includes(searchValue.toLowerCase()))
-
-        this.setState( {
-                filteredPhotos: filtered
-                } )
-    }
 
     listPhotos() {
         this.setState(state => {
@@ -54,6 +42,20 @@ class Gallery extends Component {
             }
         })
     }
+    handleSearch(e) {
+        const searchValue = e.target.value
+
+        console.log(searchValue);
+
+        let copyList = [...this.state.photos];
+
+        let filtered = copyList.filter(photo =>
+            photo.title.toLowerCase().includes(searchValue.toLowerCase()))
+
+        this.setState({
+            filteredPhotos: filtered
+        })
+    }
 
     render() {
         return (
@@ -61,6 +63,7 @@ class Gallery extends Component {
                 <Filter count={this.state.filteredPhotos.length} handleChangeCategory={this.handleChangeCategory}
                     handleSearch={this.handleSearch} />
                 <PhotosList photos={this.state.filteredPhotos} />
+                <Basket cartItems={this.state.cartItems} handleRemoveFromCart={this.handleRemoveCart} />
             </div>
         )
     }

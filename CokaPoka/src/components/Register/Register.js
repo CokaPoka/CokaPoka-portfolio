@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import './Register.css'
 import {register} from '../../service/service'
 import { useHistory } from 'react-router-dom';
+import { setToken, setId } from '../../service/auth.service';
+
 
 
 const Register = () => {
@@ -39,9 +41,11 @@ const Register = () => {
     const handleSubmit = () => {
             if (!validPw || !isSame)
             return
-         register({ name, surname, username, password, email})
+         register(name, surname, username, password, email)
             .then((res) => {
                 if (res.data.success) {
+                    setToken(res.data.token);
+                    setId(res.data.user.user_id);
                     history.push('/')
                 }
                 else console.log('Error')
