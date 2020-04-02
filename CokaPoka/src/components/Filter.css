@@ -1,0 +1,17 @@
+
+.filter-control{
+    display: flex;
+    width: 500px;
+    justify-content: space-between;
+    margin-left: 50px;
+    align-items: center;
+}
+select {
+    padding: 6px;
+}
+.input-search {
+    width: 180px;
+}
+.img-number{
+    width: 160px;
+}

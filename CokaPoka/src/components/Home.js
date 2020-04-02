@@ -12,7 +12,7 @@ const Home = () => {
                 <div className="slider-portfolio">
                     <Slideshow></Slideshow>
                     <div className="portfolio" style={{ backgroundImage: `url(${Portfolio})` }}>     
-                      <button className="text-portfolio" onClick={()=>{history.push('/buyimages')}}>PORTFOLIO</button>
+                      <button className="text-portfolio" onClick={()=>{history.push('/gallery')}}>PORTFOLIO</button>
                     </div>
                 </div>
             </div>

@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Link, Switch, Route } from 'react-router-dom';
 import Register from './Register/Register'
 import Login from './Login/Login'
 import Home from './Home'
-import BuyImages from './BuyImages'
+import Gallery from './Gallery'
 import { isLogin } from '../service/auth.service';
 
 
@@ -42,7 +42,7 @@ const Navigation = ({ setUser})=>{
                     <p>welcome</p>
                 </div>
                 <div className="about">
-                    <Link to="/buyimages" className='text-link'>BUY IMAGES</Link>
+                    <Link to="/gallery" className='text-link'>GALLERY</Link>
                     <p>portfolio</p>
                 </div>
                 <div className="contact">
@@ -54,8 +54,8 @@ const Navigation = ({ setUser})=>{
                 <Switch>
                     <Route path='/register' component={(props) => <Register setUser={setUser} {...props} />} />
                     <Route path='/login' component={(props) => <Login setUser={setUser} {...props} />} />
-                    <Route path="/buyimages">
-                        <BuyImages />
+                    <Route path="/gallery">
+                        <Gallery />
                     </Route>
                     <Route path="/">
                         <Home />

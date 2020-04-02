@@ -2,8 +2,9 @@
     display: inline-flex;
     justify-content: space-between;
     flex-direction: column;
-    margin: 5px;
-    
+    width: 30%;
+    margin: 5px 0;
+
 }
 
 .img-control {

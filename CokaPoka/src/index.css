@@ -50,6 +50,7 @@ margin: 0 5%;
   background-color: rgba(115, 133, 152, 0.1);
   position: fixed;
   width: 100%;
+  
 
 }
 .nav-control {
@@ -163,9 +164,6 @@ h4:hover{
   margin-bottom: 30px;
 }
 
-.buy-img {
-  
-}
 .albums {
   display: flex;
   justify-content: space-between;

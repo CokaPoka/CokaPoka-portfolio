@@ -9,7 +9,6 @@ const PhotosList = (props) => {
 
     return (
         <div>
-            <div>Photo List</div>
             <div className="photo-list">
                 {photos.map((photo, index) => (<Photo photo={photo} key={index} />))}
             </div>
