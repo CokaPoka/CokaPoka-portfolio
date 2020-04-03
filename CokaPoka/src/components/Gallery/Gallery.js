@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 
-import PhotosList from './PhotosList';
-import getPhotosMock from '../service/mockapi';
-import Filter from './Filter';
-import Basket from './Baket';
+import PhotoList from '../PhotoList/PhotosList';
+import getPhotosMock from '../../service/mockapi';
+import Filter from '../Filter/Filter';
+import './Gallery.css'
+
 
 class Gallery extends Component {
     constructor(props) {
@@ -62,8 +63,8 @@ class Gallery extends Component {
             <div className="gallery-control">
                 <Filter count={this.state.filteredPhotos.length} handleChangeCategory={this.handleChangeCategory}
                     handleSearch={this.handleSearch} />
-                <PhotosList photos={this.state.filteredPhotos} />
-                <Basket cartItems={this.state.cartItems} handleRemoveFromCart={this.handleRemoveCart} />
+                <PhotoList photos={this.state.filteredPhotos} length={this.state.filteredPhotos.length} />
+                <br></br>
             </div>
         )
     }

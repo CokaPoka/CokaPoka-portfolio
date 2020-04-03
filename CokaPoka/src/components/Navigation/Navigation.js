@@ -1,26 +1,28 @@
-import React, { useState } from 'react';
-import shutter from '../images/shutterstock.svg'
-import insta from '../images/instagram.svg'
-import Logo from '../images/Logo.png'
+import React, { useState} from 'react';
+import shutter from '../../images/shutterstock.svg'
+import insta from '../../images/instagram.svg'
+import Logo from '../../images/Logo.png'
 import { BrowserRouter as Router, Link, Switch, Route } from 'react-router-dom';
-import Register from './Register/Register'
-import Login from './Login/Login'
-import Home from './Home'
-import Gallery from './Gallery'
-import { isLogin, deleteToken } from '../service/auth.service';
+import Register from '../Register/Register'
+import Login from '../Login/Login'
+import Home from '../Home/Home'
+import Gallery from '../Gallery/Gallery'
+import { isLogin, deleteToken } from '../../service/auth.service';
+import './Navigation.css'
 
 
 const Navigation = () => {
-    const [token,setToken] = useState()
+    const [token, setToken] = useState()
+
 
 
     const handleLogout = () => {
         deleteToken();
-        let token=null
+        let token = null
         setToken(token)
-                     
-    }
 
+    }
+    
 
     return (
         <>
@@ -38,7 +40,7 @@ const Navigation = () => {
                         <div className="reg-log">
                             <Link to="/register" className='text-link'>Register</Link>
                             {isLogin() ? <Link to="/" className='text-link' onClick={() => { handleLogout() }} >Logout</Link> :
-                                <Login></Login>
+                                <Login token={token}></Login>
                             }
                         </div>
                     </div>
@@ -53,7 +55,7 @@ const Navigation = () => {
                             <p>welcome</p>
                         </div>
                         {isLogin() ? <div className="about">
-                            <Link to="/gallery" className='text-link'>GALLERY</Link>
+                            <Link to="/gallery" className='text-link' >GALLERY</Link>
                             <p>portfolio</p>
                         </div> : <div className="about">
                                 <Link to="/register" className='text-link'>GALLERY</Link>

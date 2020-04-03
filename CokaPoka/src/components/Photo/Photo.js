@@ -7,11 +7,11 @@ class Photo extends Component {
     render() {
     return (
         <div className="photo">
-        <Flippy
+        <Flippy className="flippy"
             flipOnHover={true}
             flipDirection="horizontal"
             ref={(r) => this.flippy = r}
-            style={{ width: '400px', height: '290px' }}
+            style={{ width: '350px', height: '250px' }}
         >
             <FrontSide
                 style={{

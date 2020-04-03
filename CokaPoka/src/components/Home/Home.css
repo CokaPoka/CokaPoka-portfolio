@@ -1,0 +1,123 @@
+.wrapper {
+margin: 0 5%;
+padding-top: 230px;
+}
+.slider-portfolio{
+  display: flex;
+  justify-content: space-between;
+  
+
+}
+
+.portfolio {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 675px;
+  width: 37.5%;
+  background-size: cover;
+   }
+
+.text-portfolio {
+  background-color: rgba(255, 250, 254, 0.85);
+  width: 180px;
+  border: none;
+  font-size: 25px;
+  text-align: center;
+  font-weight: lighter;
+  text-decoration: none;
+  color: #738598;
+}
+.text-portfolio:hover{
+  background-color: rgba(255, 250, 254);
+  width: 185px;
+  font-size: 25.5px;
+  text-align: center;
+  font-weight: lighter;
+  border: none;
+}
+
+@media (max-width: 1100px){
+.slider-portfolio{
+  display: flex;
+  flex-direction: column;
+  height: 800px;
+}
+.portfolio {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  width: 80%;
+  background-size: cover;
+  margin-bottom: 20px;
+   }
+}
+@media (max-width: 1500px){
+.slider-portfolio{
+  display: flex;
+  flex-direction: column;
+  height: 1010px;
+}
+.portfolio {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  width: 80%;
+  background-size: cover;
+  margin-bottom: 20px;
+   }
+}
+
+
+@media (max-width: 800px){
+.slider-portfolio{
+  display: flex;
+  flex-direction: column;
+  height: 850px;
+}
+.portfolio {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+  width: 80%;
+  background-size: cover;
+  margin-bottom: 20px;
+   }
+}
+
+@media (max-width: 600px){
+.slider-portfolio{
+  display: flex;
+  flex-direction: column;
+  height: 670px;
+}
+.portfolio {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  width: 80%;
+  background-size: cover;
+  margin-bottom: 20px;
+   }
+}
+
+@media (max-width: 360px){
+.slider-portfolio{
+  display: flex;
+  flex-direction: column;
+  height: 480px;
+}
+.portfolio {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  width: 80%;
+  background-size: cover;
+  margin-bottom: 20px;
+   }
+}

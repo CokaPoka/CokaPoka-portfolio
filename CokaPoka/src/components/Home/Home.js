@@ -1,8 +1,9 @@
 import React from 'react'
-import { Slideshow } from './Slider'
-import Portfolio from '../images/portfolio.jpg'
 import { useHistory } from 'react-router-dom'
-import { isLogin } from '../service/auth.service'
+import { Slideshow } from '../Slider/Slider'
+import Portfolio from '../../images/portfolio.jpg'
+import { isLogin } from '../../service/auth.service'
+import './Home.css'
 
 
 const Home = () => {
