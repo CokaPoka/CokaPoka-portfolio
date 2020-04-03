@@ -4,7 +4,7 @@ import {login} from '../../service/service'
 import { useHistory } from 'react-router-dom';
 import { setToken, setId, isLogin } from '../../service/auth.service';
 
-const Login = ({token}) => {
+const Login = () => {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
     const history=useHistory()
@@ -16,9 +16,11 @@ const Login = ({token}) => {
                 if (res.data.success) {
                     setToken(res.data.token)
                     setId(res.data.user.user_id);
-                    history.push('/')
-                    token = res.data.token
                     isLogin(true)
+                    history.push('/')
+                    window.location.reload()
+                    
+                    
 
                 }
                 else console.log('Not logged in.')

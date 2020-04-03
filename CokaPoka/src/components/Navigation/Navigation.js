@@ -24,6 +24,7 @@ const Navigation = () => {
     }
     
 
+
     return (
         <>
             <Router>
@@ -54,17 +55,13 @@ const Navigation = () => {
                             <Link to="/" className='text-link'>HOME</Link>
                             <p>welcome</p>
                         </div>
-                        {isLogin() ? <div className="about">
+                        {isLogin() ? <div className="gallery">
                             <Link to="/gallery" className='text-link' >GALLERY</Link>
                             <p>portfolio</p>
-                        </div> : <div className="about">
+                        </div> : <div className="gallery">
                                 <Link to="/register" className='text-link'>GALLERY</Link>
                                 <p>portfolio</p>
                             </div>}
-                        <div className="contact">
-                            <Link to="/contact" className='text-link'>CONTACT</Link>
-                            <p>stay in touch</p>
-                        </div>
                     </div>
                 </div>
                 <Switch>
